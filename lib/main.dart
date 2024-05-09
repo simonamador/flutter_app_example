@@ -21,18 +21,20 @@ class YoutubePlayerDemoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Youtube Player Flutter',
+
+// Cambios a la paleta de la colores
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
         appBarTheme: const AppBarTheme(
-          color: Colors.blueAccent,
+          color: Colors.redAccent,
           titleTextStyle: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: FontWeight.w300,
             fontSize: 20,
           ),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.blueAccent,
+          color: Colors.redAccent,
         ),
       ),
       home: MyHomePage(),
@@ -57,7 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isPlayerReady = false;
 
   final List<String> _ids = [
-    YoutubePlayer.convertUrlToId("https://www.youtube.com/watch?v=UUhavvMO2FQ").toString(),
+    // Cambio de video
+    YoutubePlayer.convertUrlToId("https://www.youtube.com/watch?v=2eScHcSPhyI").toString(),
   ];
 
   @override
@@ -149,8 +152,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       builder: (context, player) => Scaffold(
         appBar: AppBar(
+          // Cambio del titulo
           title: const Text(
-            'Pedro Pedro Pedro Pedro',
+            'Despues de todo, es Rafa.',
             style: TextStyle(color: Colors.white),
           ),
         ),
